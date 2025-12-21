@@ -1,6 +1,6 @@
 #include <iostream>
-#include <algorithm> //Подключение библиотеки для reverse
-#include <cstring> //Подключение библиотеки для reverse
+#include <algorithm> 
+#include <cstring>
 using namespace std;
 
 
@@ -8,15 +8,15 @@ using namespace std;
 void Count(const string &stroka, int &letters, int &digits, int &spaces, int &others) {
     letters = 0;
     digits = 0;
-    spaces = 0;    //Счетчики символов
+    spaces = 0;    
     others = 0;
 
     //Длина строки
     int n = stroka.length(); 
 
-    //Цикл для вычисления количества символов
+    
     for (int i = 0; i < n; i++) {
-        //Берем первый символ в с
+        
         char c = stroka[i];
 
         //Проверка на буквы
@@ -61,4 +61,5 @@ int main(){
     cout << "Others: " << others << endl; 
 
     return 0;
+
 }
