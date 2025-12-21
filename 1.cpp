@@ -1,12 +1,12 @@
 #include <iostream>
-#include <algorithm> //Подключение библиотеки для reverse
-#include <cstring> //Подключение библиотеки для reverse
+#include <algorithm> 
+#include <cstring> 
 using namespace std;
 
 int main(){
-    //Способ через algorithm
+  
     
-    //Переменная для reverse
+    //Переменная
     string input_1;
     
     //Ввод строки
@@ -23,7 +23,7 @@ int main(){
 
 
     
-    //Способ через цикл
+  
     
     //Максимальный размер строки
     char input[100];
@@ -46,4 +46,5 @@ int main(){
     cout << "String without algorithm: " << input << endl;
 
     return 0;
+
 }
