@@ -1,17 +1,17 @@
 #include <iostream>
-#include <algorithm> //Подключение библиотеки для reverse
-#include <cstring> //Подключение библиотеки для reverse
+#include <algorithm> 
+#include <cstring>
 using namespace std;
 
-//Функция для форматирования ФИО
+//Функция
 void NameFio(const string name){
-    int n = name.length(); //Находим длину строки
+    int n = name.length(); 
     int space = 0; //Счетчик пробелов
 
     //Цикл для форматирования
     for(int i = 0; i < n; i++){
         char stroka = name[i];
-        //Условие проверки наличия пробелов
+       
         if(stroka == ' '){
             space++;
         }
@@ -27,4 +27,5 @@ int main() {
 
 
     return 0;
+
 }
