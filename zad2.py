@@ -1,24 +1,26 @@
-def greedy_meetings(meetings):  #Функция для выбора максимального количества непересекающихся заседаний
+def greedy_meetings(meetings):  
+    #Функция для выбора максимального количества непересекающихся заседаний
     """
     meetings: список (начало, конец)
     """
-    #Сортировка по окончанию времени
+   
     sorted_meet = sorted(meetings, key=lambda x: x[1])
 
-    selected = []   #Выбранные заседания
-    last_end = -1   #Время окончания последнего заседания
+    selected = []   
+    last_end = -1   
 
-    for start, end in sorted_meet:  #Цикл: перебирание заседаний
-        if start >= last_end:               #Условие: если если начало текущего заседания >= окончания предыдущего
-            selected.append((start, end))   #Добавляем в список выбранных заседаний
+    for start, end in sorted_meet:  
+        if start >= last_end:              
+            selected.append((start, end))  
             last_end = end
 
-    return selected                         #Возвращаем выбранные заседания
+    return selected                         
+    #выбранные заседания
 
-#Пример заседаний
+
 meetings = [(9, 10), (10, 12), (11, 13), (12, 14), (13, 15)] #Заседания
 
-#Вывод результата
+#Вывод
 print("\nЭвристика: выбор заседаний")
-print("Все заседания:", meetings)
+print("Все заседания - ", meetings)
 print("Максимум можно посетить:", greedy_meetings(meetings))
